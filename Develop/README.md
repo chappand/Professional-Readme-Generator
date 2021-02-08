@@ -8,7 +8,6 @@ This application is used to help quickly, and easily generate a professional rea
 
 * [Installation](#installation)
 * [Usage](#usage)
-* [License](#license)
 * [Contributing](#contributing)
 * [Tests](#tests)
 * [Questions](#questions)
@@ -19,7 +18,7 @@ You just need to make sure that you do "npm install" to get the correct packages
 
 ## Usage
 
-Just navigate to the correct folder in your terminal and type "node index.js" to start the program. Answer the questions as the populate. I have added a video tutorial here:
+Just navigate to the correct folder in your terminal and type "node index.js" to start the program. Answer the questions as the populate. I have added a video tutorial here: [Tutorial](https://drive.google.com/file/d/1l4WvcsQLw0F9l7ERFgLCxcEEMayMZvdR/view)
 
 ## Contributing
 

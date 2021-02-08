@@ -20,21 +20,36 @@ const promptUser = () =>
       name: 'installation',
       message: 'Please describe the installation process here.',
     },
-    // {
-    //   type: 'input',
-    //   name: 'food',
-    //   message: 'What is your favorite food?',
-    // },
-    // {
-    //   type: 'input',
-    //   name: 'github',
-    //   message: 'Enter your GitHub Username',
-    // },
-    // {
-    //   type: 'input',
-    //   name: 'linkedin',
-    //   message: 'Enter your LinkedIn URL.',
-    // },
+    {
+      type: 'input',
+      name: 'usage',
+      message: 'Please add instrusctions for usage here.',
+    },
+    {
+      type: 'input',
+      name: 'contributing',
+      message: 'Describe you contributing guidelines here.',
+    },
+    {
+      type: 'input',
+      name: 'tests',
+      message: 'Please enter instructions for testing here.',
+    },
+    {
+        type: 'input',
+        name: 'githubUN',
+        message: 'What is your GitHun username?',
+    },
+    {
+        type: 'input',
+        name: 'githubLink',
+        message: 'What is the link to your GitHub?',
+    },
+    {
+        type: 'input',
+        name: 'email',
+        message: 'What is your email address?',
+    },
   ]);
 
 
@@ -61,16 +76,30 @@ ${userInput.installation}
 
 ## Usage
 
-## Licesne
+${userInput.usage}
+
+## License
 
 ## Contributing
 
+${userInput.contributing}
+
 ## Tests
 
-## Questions`;
+${userInput.tests}
+
+## Questions
+
+Here is the link to my GitHub: [${userInput.githubUN}](${userInput.githubLink})
+
+If you have any further questions, please reach out to me via email at: ${userInput.email}`;
 
 // Function call to initialize app
 promptUser()
-  .then((userInput) => fs.writeFile('README.md', generateReadme(userInput), () => console.log("There was an error, please try again!")))
-  .then(() => console.log('Successfully created Readme!'))
-
+  .then((userInput) => fs.writeFile('README.md', generateReadme(userInput), (err) => {
+      if (err) {
+      console.log("There was an error, please try again!");
+    } else {
+        console.log('Successfully created Readme!');
+    }
+    }));
